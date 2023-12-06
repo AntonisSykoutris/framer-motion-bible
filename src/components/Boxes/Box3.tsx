@@ -32,17 +32,9 @@ export default function Box3({}: Props) {
         variants={boxVariants}
         initial='initial'
         animate='animate'
-        whileInView='animate'
       >
         {[1, 2, 3].map((_, index) => {
-          return (
-            <motion.li
-              key={index}
-              className='w-10 h-10 bg-white  list-none'
-              variants={listVariants}
-              whileInView='animate'
-            ></motion.li>
-          );
+          return <motion.li key={index} className='w-10 h-10 bg-white  list-none' variants={listVariants}></motion.li>;
         })}
       </motion.div>
     </div>

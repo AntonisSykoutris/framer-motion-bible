@@ -11,7 +11,7 @@ const boxVariants = {
     opacity: 1,
     rotate: 360,
     transition: {
-      type: 'spring',
+      type: 'spring', // tween, spring, inertia, where default is tween
       stiffness: 60,
     },
   },

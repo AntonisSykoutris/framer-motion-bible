@@ -3,9 +3,6 @@ import NextUIProvider from '@/context/NextUIProvider';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 
-// import Header from '../components/Header';
-// import Footer from '../components/Footer';
-
 import './globals.css';
 import Footer from '@/components/Footer';
 
@@ -22,7 +19,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <meta name='viewport' content='user-scalable=no, width=device-width, initial-scale=1.0' />;
       <body className={`${inter.className}`}>
         <NextUIProvider>
-          {/* <Header /> */}
           {children}
           <Footer />
         </NextUIProvider>

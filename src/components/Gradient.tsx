@@ -5,20 +5,20 @@ import { MouseEvent, useState } from 'react';
 type Props = {};
 
 export default function Gradient({}: Props) {
-  // const mouseX = useMotionValue(0);
-  // const mouseY = useMotionValue(0);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
-  const [mouseX, setMouseX] = useState(0);
-  const [mouseY, setMouseY] = useState(0);
+  // const [mouseX] = useState(0);
+  // const [mouseY, setMouseY] = useState(0);
   console.log('render');
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     const { left, top } = currentTarget.getBoundingClientRect();
 
-    setMouseX(clientX - left);
-    setMouseY(clientY - top);
-    // mouseX.set(clientX - left);
-    // mouseY.set(clientY - top);
+    // setMouseX(clientX - left);
+    // setMouseY(clientY - top);
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
   }
 
   return (
